@@ -17,6 +17,7 @@
 # This was the original concept program thought of as back up OS, or buos.py
 # the program does not support sftp, or checking of the written images. it is 
 # just the core writing to the sd card or USB device.
+# revised buos.py to perform a flush of the write cache prior to ejection.
 # *****NOTICE*****
 # 
 #import the os for commands from OS
@@ -42,7 +43,8 @@ Y = "y"         # This is the variable which stores the Yes or y answer if the s
 # set up functions for flushing write cache, unmounting and ejecting devices...
 #
 def fin(sdX):
-    print("")
+    print()
+    os.sytem ('sync')
     driveumount = "sudo umount /dev/"+sdX
     driveject = "sudo eject /dev/"+sdX  
     os.system (driveumount)
