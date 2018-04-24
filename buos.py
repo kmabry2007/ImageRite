@@ -13,7 +13,12 @@
 #WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #See the License for the specific language governing permissions and
 #limitations under the License.
-#
+# *****NOTICE*****
+# This was the original concept program thought of as back up OS, or buos.py
+# the program does not support sftp, or checking of the written images. it is 
+# just the core writing to the sd card or USB device.
+# *****NOTICE*****
+# 
 #import the os for commands from OS
 import os
 #
