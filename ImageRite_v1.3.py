@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 #
 #
-# This version supports image sftp from a remote server on the network,
-# image checking, automatic unmounting and ejection.
+# This version no longer supports image sftp from a remote server on the network.
+# However, image checking, automatic unmounting and ejection remain. Also, the program
+# automatically detects if a USB drive is present prior to writing the USB or sd card.
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 # Status of this version is 'IN testing'
 # 
@@ -17,8 +18,9 @@
 #
 #  Improvements in this version is automatic checking for USB or sd card
 #  insertion. Program stops if not inserted. enhanced file typ checking
-#  to insure only an image or zip file is written. Other extensions are
-#  rejected!
+#  to insure only an image or zip file is written. Provision for .iso files
+#  to be written to USB or sd card if needed.
+#  Other extensions arerejected!
 #
 #  The plan is that I will eventually replace the os.sytem commands with
 #  subprocess commands.
