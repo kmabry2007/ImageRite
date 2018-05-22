@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 #
 #to insure only an image or zip file is written.
-# This version supports image sftp from a remote server on the network,
+# Thiis version supports
 # image checking, automatic unmounting and ejection.
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 # Status of this version is 'Ready for Release'
@@ -79,9 +79,7 @@ def main(argv):
    print("***** WARNING!***** This action will erase all files on the device!! ")
    print()
    if filtyp == 'im':   # img file; testing 2 characters to determine file type
-      #print('filetype is ', filtyp)
       str = "sudo dd bs=4M if="+inputfile+" of="+outputfile+" status=progress conv=fsync"
-      #print()
       print("Writing image to device "+outputfile)
       print()
       os.system (str)
@@ -125,13 +123,7 @@ def main(argv):
       os.system (str)
    else:
       sys.exit("Invalid file type! Exiting program...")
-# If not either an im(g) or zi(p) file, then abort the write and exit
-# Note: I could test for an is(o) file, and add a write feature here tbd.
-# thinking about doing iso file write section for the raspbian iso for
-# non - arm operating systems; specifically usb drives to install stretch
-# for Raspberry Pi Desktop (for PC and Mac)        
-#
-
+# If not either an im(g), zi(p) or .is(o) file, then abort the write and exit
 # flush the write cache and proceed with drive unmount and eject.    
    os.system ('sync')
    print()
