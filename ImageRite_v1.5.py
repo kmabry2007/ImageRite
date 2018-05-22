@@ -107,7 +107,6 @@ def main(argv):
       rmfil = "rm "+cwd+"/from-sd-card.img"
       os.system(rmfil)
    elif filtyp == 'zi':  # zip file; testing 2 characters to determine file type
-      #print('filetype is ', filtyp)
       print()
       str = "unzip -p "+inputfile+ "| sudo dd bs=4M of= "+outputfile+" status=progress conv=fsync"
       print("Unzipping and writing "+inputfile+" to "+outputfile)
