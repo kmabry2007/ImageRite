@@ -114,7 +114,7 @@ def main(argv):
       str = "unzip -p "+inputfile+ "| sudo dd bs=4M of= "+outputfile+" status=progress conv=fsync"
       print("Unzipping and writing "+inputfile+" to "+outputfile)
       print()
-   #
+      os.system(str)
    elif filtyp == 'is':  # iso file; testing 2 characters to determine file type 
       #print('filetype is ', filtyp)
       #print()
